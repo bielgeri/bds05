@@ -1,5 +1,6 @@
 package com.devsuperior.movieflix.entities;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 import jakarta.persistence.Entity;
@@ -12,7 +13,8 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name="tb_review")
-public class Review {
+public class Review implements Serializable {
+	private static final long serialVersionUID = 1L; 
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -22,6 +24,10 @@ public class Review {
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
+	
+	@ManyToOne
+	@JoinColumn(name = "movie_id")
+	private Movie movies;
 	
 	public Review() {}
 	
