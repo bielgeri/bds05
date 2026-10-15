@@ -113,6 +113,22 @@ public class Movie implements Serializable{
 	}
 
 
+	
+	public List<Review> getReviews() {
+		return reviews;
+	}
+
+
+	public Genre getGenre() {
+		return genre;
+	}
+	
+	
+	public void setGenre(Genre genre) {
+		this.genre = genre;
+	}
+
+
 	@Override
 	public int hashCode() {
 		return Objects.hash(id);

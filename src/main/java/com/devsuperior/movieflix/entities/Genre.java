@@ -47,6 +47,12 @@ public class Genre implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
+	
+	
+
+	public List<Movie> getMovies() {
+		return movies;
+	}
 
 	@Override
 	public int hashCode() {
